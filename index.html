@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="glows" id="glows">
+        <div class="first glow" style="--glow-color: purple;"></div>
+        <div class="second glow" style="--glow-color: green;"></div>
+        <div class="third glow" style="--glow-color: blue;"></div>
+        <div class="fourth glow" style="--glow-color: rgb(29, 211, 181);"></div>
+    </div>
+
+    <div class="hero" id="hero">
+        <div class="logo">
+            <img src="Images/Logo.png" draggable="false" alt="Smart Home Dashboard">
+        
+            <h1>
+                Smart<span>Home</span>
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="main-content hide" id="mainContent">
+        <nav class="navbar">
+            <div class="logo" id="Home-Nav-Link" onclick="selectNav(id,'home-link'); select(this.id); return false;">
+                <img src="Images/Logo.png" draggable="false" alt="">
+        
+                <h1>
+                    Smart<span>Home</span>
+                </h1>
+            </div>
+        
+            <ul class="nav-links">
+                <li>
+                    <a href="#Home" id="Home-Nav-Link" onclick="selectNav(id,'home-link'); select(this.id); return false;"
+                        class="home-link active">Home</a>
+                </li>
+                <li>
+                    <a href="#Contact-Sec" id="Contact-Nav-Link"
+                        onclick="selectNav(this.id, 'contact-link'); select(this.id); return false;"
+                        class="contact-link">Contact</a>
+                </li>
+                <li>
+                    <a href="" id="Footer-Nav-Link" onclick="selectNav(id,'footer-link'); select(this.id); return false;"
+                        class="footer-link">Footer</a>
+                </li>
+            </ul>
+        
+            <div class="search-section">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: rgb(219, 227, 238);"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="notifacations">
+                    <span class="numb-nf">3</span>
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+            </div>
+        
+        </nav>
+        
+        
+        <aside class="sideBar" id="sideBar">
+        
+            <div class="sidebar-links">
+                <a href="#Devices" onmouseenter="onEnter(id)" onmouseLeave="onLeave(id)" onclick="select(id)"
+                    class="sidebar-link link" id="DevicesLink"><i class="fa-solid fa-computer"
+                        style="color: var(--common-color);"></i>Devices</a>
+                <a href="#Rooms" onmouseenter="onEnter(id)" onmouseLeave="onLeave(id)" onclick="select(id)"
+                    class="sidebar-link link" id="RoomsLink"><i class="fa-solid fa-house"
+                        style="color: var(--common-color);"></i>Rooms</a>
+                <a href="#Automation" id="AutomationLink" onmouseenter="onEnter(id)" onmouseLeave="onLeave(id)"
+                    onclick="select(id)" class="sidebar-link link"><i class="fa-brands fa-hubspot"
+                        style="color: var(--common-color);"></i>Automation</a>
+                <a href="#Energy" onmouseenter="onEnter(id)" onmouseLeave="onLeave(id)" onclick="select(id)"
+                    class="sidebar-link link" id="EnergyLink"><i class="fa-solid fa-bolt"
+                        style="color: var(--common-color);"></i>Energy</a>
+                <a href="#Security" id="SecurityLink" onmouseenter="onEnter(id)" onmouseLeave="onLeave(id)" onclick="select(id)"
+                    class="sidebar-link link"><i class="fa-solid fa-shield-halved"
+                        style="color: var(--common-color);"></i>Security</a>
+                <a href="#Settings" id="SettingsLink" onmouseenter="onEnter(id)" onmouseLeave="onLeave(id)" onclick="select(id)"
+                    class="sidebar-link link"><i class="fa-solid fa-gear" style="color: var(--common-color);"></i>Settings</a>
+            </div>
+            <div class="explore">
+                <div class="content">
+                    <h2>Make your <br>home smarter</h2>
+                    <button class="explore-btn">Explore More</button>
+                </div>
+            </div>
+            <div class="line"></div>
+            <section class="profile-sec">
+                <img src="Images/file.jpg" draggable="false" alt="profile image">
+                <div class="info">
+                    <h3>Hamdy Mohamed</h3>
+                    <h4>Admin</h4>
+                </div>
+            </section>
+        </aside>
+        
+        <main class="main" id="main">
+            <div class="header-bar">
+                <div class="left">
+                    <div class="welcome">
+                        <h2>Good evening, Hamdy 👋</h2>
+                        <p>Here's what happening in your smart home</p>
+                    </div>
+                </div>
+            </div>
+            <div class="status-bar">
+                <div class="Temperature card">
+                    <div class="left">
+                        <h4 style="--status-color:white">Temperature</h4>
+                        <h2 style="--status-color:white">24°C</h2>
+                        <p style="--status-color:white">Living Room</p>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-temperature-three-quarters" style="color: rgb(243, 134, 46);"></i>
+                    </div>
+                    <div class="chart1 chart" id="chart1"></div>
+                </div>
+                <div class="Lights-on card">
+                    <div class="left">
+                        <h4 style="--status-color:black">Lights On</h4>
+                        <h2 style="--status-color:black">6 / 12</h2>
+                        <p style="--status-color:var(--common-color)">Devices</p>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-lightbulb" style="color: rgb(255, 187, 2);"></i>
+                    </div>
+                    <div class="chart2 chart" id="chart2"></div>
+                </div>
+                <div class="Energy-usage card">
+                    <div class="left">
+                        <h4 style="--status-color:black">Energy Usage</h4>
+                        <h2 style="--status-color:black">12.4 kWh</h2>
+                        <p style="--status-color:var(--common-color)">Today</p>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-bolt" style="color: rgb(255, 107, 0);"></i>
+                    </div>
+                    <div class="chart3 chart" id="chart3"></div>
+                </div>
+                <div class="Security-card card">
+                    <div class="left">
+                        <h4 style="--status-color:white">Security</h4>
+                        <h2 style="--status-color:white">All Good</h2>
+                        <p style="--status-color:white">No alerts</p>
+                    </div>
+                    <div class="right">
+                        <i class="fa-solid fa-shield-halved" style="color: rgb(104, 68, 19);"></i>
+                    </div>
+                    <div class="chart4 chart" id="chart4"></div>
+                </div>
+            </div>
+            <div class="Under-Sec">
+                <div class="Rooms">
+                    <div class="head">
+                        <h2>Security Zones</h2>
+                        <a href="#">View All</a>
+                    </div>
+                    <div class="content">
+        
+                        <div class="swiper roomsSwiper">
+        
+                            <div class="swiper-wrapper">
+        
+                                <div class="swiper-slide">
+        
+                                    <div class="Groups">
+        
+                                        <div class="group-1 Groups" id="Group1">
+                                            <a href="#Livingroom">
+                                                <div class="Living-Room room">
+                                                    <div class="img">
+                                                        <img src="Images/Living Room.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-couch" style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Living Room</h3>
+                                                        <h4>4 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#Kitchen">
+                                                <div class="Kitchen room">
+                                                    <div class="img">
+                                                        <img src="Images/Kitchen.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-kitchen-set"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Kitchen</h3>
+                                                        <h4>3 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#Bedroom">
+                                                <div class="Bedroom room">
+                                                    <div class="img">
+                                                        <img src="Images/BedRoom.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-bed" style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Bedroom</h3>
+                                                        <h4>2 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#Bathroom">
+                                                <div class="Bathroom room">
+                                                    <div class="img">
+                                                        <img src="Images/Bathroom.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-toilet-portable"
+                                                                style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Bathroom</h3>
+                                                        <h4>1 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+        
+                                <div class="swiper-slide">
+        
+                                    <div class="Groups">
+        
+                                        <div class="group-2 Groups" id="Group2">
+                                            <a href="#GuestRoom">
+                                                <div class="Guest-Room room">
+                                                    <div class="img">
+                                                        <img src="Images/GuesRoom.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-couch" style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Guest Room</h3>
+                                                        <h4>5 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#Garage">
+                                                <div class="Garage room">
+                                                    <div class="img">
+                                                        <img src="Images/Garage.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-kitchen-set"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Garage</h3>
+                                                        <h4>3 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#Hallway">
+                                                <div class="Hallway room">
+                                                    <div class="img">
+                                                        <img src="Images/Hallway.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-bed" style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Hallway</h3>
+                                                        <h4>8 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#DiningRoom">
+                                                <div class="Dining room">
+                                                    <div class="img">
+                                                        <img src="Images/DiningRoom.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-toilet-portable"
+                                                                style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Dining Room</h3>
+                                                        <h4>6 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+        
+                                <div class="swiper-slide">
+        
+                                    <div class="Groups">
+        
+                                        <div class="group-3 Groups" id="Group3">
+                                            <a href="#Patio">
+                                                <div class="Patio room">
+                                                    <div class="img">
+                                                        <img src="Images/Patio.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-couch" style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Patio Room</h3>
+                                                        <h4>4 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#Nursery">
+                                                <div class="Nursery room">
+                                                    <div class="img">
+                                                        <img src="Images/Nursery.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-kitchen-set"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Nursery Room</h3>
+                                                        <h4>5 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#Office">
+                                                <div class="Office room">
+                                                    <div class="img">
+                                                        <img src="Images/Office.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-bed" style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Office Room</h3>
+                                                        <h4>9 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#LaundryRoom">
+                                                <div class="LaundryRoom room">
+                                                    <div class="img">
+                                                        <img src="Images/Laundry Room.jfif" alt="">
+                                                        <div class="icon">
+                                                            <i class="fa-solid fa-toilet-portable"
+                                                                style="color: rgb(255, 255, 255);"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>Laundry Room</h3>
+                                                        <h4>2 Devices</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+        
+                            <div class="swiper-pagination"></div>
+        
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="Quick-ctl">
+                    <h2>Quick control</h2>
+                    <div class="Controls">
+                        <div class="light-bulb control">
+                            <i class="fa-solid fa-lightbulb" style="color: rgb(255, 187, 2);"></i>
+                            <h3>Living Room Lights</h3>
+                            <h5 class="status">On</h5>
+        
+                            <!-- Rounded switch -->
+                            <label class="switch">
+                                <input type="checkbox" id="toggleSwitch">
+                                <span class="slider round"></span>
+                            </label>
+        
+                        </div>
+                        <div class="Bedroom-AC control">
+                            <i class="fa-solid fa-mattress-pillow" style="color: rgb(247, 93, 73);"></i>
+                            <h3>Living Room Lights</h3>
+                            <h5 class="status">22°C</h5>
+        
+                            <!-- Rounded switch -->
+                            <label class="switch">
+                                <input type="checkbox" id="toggleSwitch">
+                                <span class="slider round"></span>
+                            </label>
+        
+                        </div>
+                        <div class="Security-card control">
+                            <i class="fa-solid fa-shield-heart" style="color: rgb(13, 25, 78);"></i>
+                            <h3>Living Room Lights</h3>
+                            <h5 class="status">Armed</h5>
+        
+                            <!-- Rounded switch -->
+                            <label class="switch">
+                                <input type="checkbox" id="toggleSwitch">
+                                <span class="slider round"></span>
+                            </label>
+        
+                        </div>
+                        <div class="Garden-Lights control">
+                            <i class="fa-solid fa-lightbulb" style="color: rgb(250, 204, 52);"></i>
+                            <h3>Garden Lights</h3>
+                            <h5 class="status">Off</h5>
+        
+                            <!-- Rounded switch -->
+                            <label class="switch">
+                                <input type="checkbox" id="toggleSwitch">
+                                <span class="slider round"></span>
+                            </label>
+        
+                        </div>
+                    </div>
+                    <button class="turn-off" id="resetBtn" onclick="resetSWT()"><i class="fa-solid fa-power-off"
+                            style="color: rgb(231, 113, 22);"></i> Turn All Off</button>
+                </div>
+        
+                <!-- The Energy Usage Section -->
+                <div class="energy-usage">
+                    <div class="head">
+                        <h2>Energy Usage</h2>
+                        <div class="dropdown" onclick="dropLi()">
+                            <div class="selected" id="selected">
+                                <span class="option">This Week</span>
+                                <i class="fa-solid fa-angle-down" id="down" style="color: rgba(71, 69, 69, 0.473);"></i>
+                                <i class="fa-solid fa-angle-up" id="up" style="color: rgba(71, 69, 69, 0.473);"></i>
+                            </div>
+        
+                            <ul class="menu" id="menu">
+                                <li onclick="dropDown(this)">This Week</li>
+                                <li onclick="dropDown(this)">This Day</li>
+                                <li onclick="dropDown(this)">This Month</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="energy-card">
+                        <div class="chart-box">
+                            <div class="energyChart" id="energyChart"></div>
+                        </div>
+        
+                        <div class="circle-box">
+                            <div class="circle-container">
+                                <div class="energyCircle" id="energyCircle"></div>
+                            </div>
+        
+                            <div class="compare">
+                                <span>+8%</span>vs last week
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Recent-Activities">
+                    <h2>Recent Activities</h2>
+                    <div class="Controls">
+                        <div class="light-bulb control">
+                            <i class="fa-solid fa-lightbulb light" style="color: white;"></i>
+                            <h3>Living Room Lights turned on</h3>
+                            <h5 class="time">2 minutes ago</h5>
+                        </div>
+                        <div class="Bedroom-AC control">
+                            <i class="fa-solid fa-broom broom" style="color: rgb(74, 154, 217);"></i>
+                            <h3>Bedroom AC temperature changed to 22°C<h3>
+                                    <h5 class="time">15 minutes ago</h5>
+                        </div>
+                        <div class="Security-card control">
+                            <i class="fa-solid fa-lock lock" style="color: rgb(13, 141, 68);"></i>
+                            <h3>Front Door unlocked</h3>
+                            <h5 class="time">1 hour ago</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <footer id="Footer">
+                <div class="author">
+                    <p>Author: <br><span>Hamdy Mohamed Saleh</span></p>
+                </div>
+                <div class="social-links">
+                    <p><i class="fa-brands fa-youtube" style="color: rgb(255, 0, 10);"></i> <span style="color: red;">Youtube:
+                        </span><a target="_blank" href="https://www.youtube.com/channel/UCdbeR8bxUmXu_tdAgCm65Ng">
+                            Yout:Profile</a></p>
+                    <p><i class="fa-brands fa-facebook" style="color: rgb(5, 81, 240);"></i> <span
+                            style="color: rgb(73, 73, 247);">Facebook: </span><a target="_blank"
+                            href="https://www.facebook.com/profile.php?id=61570726985590">Face:Profile</a></p>
+                    <p><i class="fa-brands fa-x-twitter" style="color: rgb(0, 0, 0);"></i> <span style="color: black;">Twitter:
+                        </span><a target="_blank" href="https://x.com/HamdyMS1">Hamdy Profile X</a></p>
+                </div>
+                <div class="commincaction">
+                    <p><i class="fa-solid fa-phone" style="color: rgb(70, 87, 244);"></i> <span
+                            style="color: rgb(70, 87, 244);">tel: </span>+201055555555</p>
+                    <p><i class="fa-solid fa-at" style="color: rgb(240, 5, 5);"></i> <span style="color: red;">email:
+                        </span>hamdymsm1<span style="color:red;">@gmail.com</span></p>
+                </div>
+            </footer><br><br>
+            <div class="copy-right">
+                <span>@Copyright Hamdymsm1@gmail.com 2026</span>
+            </div><br>
+        </main>
+        
+        
+        <section class="Devices" id="DevicesSection">
+            <script>
+
+                const Groups = {
+                    FirstGroup: {
+                        LivingRoom: {
+                            RoomName: "LivingRoom",
+                            PC: {
+                                DeviceName: "PC",
+                                DeviceImg: "Images/PC.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Television: {
+                                DeviceName: "Television",
+                                DeviceImg: "Images/TV.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            AC: {
+                                DeviceName: "AC",
+                                DeviceImg: "Images/AC.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Leds: {
+                                DeviceName: "Leds",
+                                DeviceImg: "Images/Leds.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        },
+                        Bedroom: {
+                            RoomName: "Bedroom",
+                            Led1: {
+                                DeviceName: "Led1",
+                                DeviceImg: "Images/Led1.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255)"
+                            },
+                            Led2: {
+                                DeviceName: "Led2",
+                                DeviceImg: "Images/Led2.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Television: {
+                                DeviceName: "Television",
+                                DeviceImg: "Images/TV.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255)"
+                            },
+                            AC: {
+                                DeviceName: "AC",
+                                DeviceImg: "Images/AC.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                        },
+                        Kitchen: {
+                            RoomName: "Kitchen",
+                            Fridge: {
+                                DeviceName: "Fridge",
+                                DeviceImg: "Images/Fridge.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255)"
+                            },
+                            Leds: {
+                                DeviceName: "Leds",
+                                DeviceImg: "Images/Leds.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255)"
+                            },
+                            Oven: {
+                                DeviceName: "Oven",
+                                DeviceImg: "Images/oven.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+
+                        },
+                        Bathroom: {
+                            RoomName: "Bathroom",
+                            Shower: {
+                                DeviceName: "Shower",
+                                DeviceImg: "Images/Shower.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        }
+                    },
+                    SecondGroup: {
+                        GuestRoom: {
+                            RoomName: "GuestRoom",
+                            AC: {
+                                DeviceName: "AC",
+                                DeviceImg: "Images/AC.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            TV: {
+                                DeviceName: "TV",
+                                DeviceImg: "Images/TV.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led1: {
+                                DeviceName: "Led1",
+                                DeviceImg: "Images/Leds.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led2: {
+                                DeviceName: "Led2",
+                                DeviceImg: "Images/led2.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        },
+                        Garage: {
+                            RoomName: "Garage",
+                            Door: {
+                                DeviceName: "Door",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            GarageLed: {
+                                DeviceName: "GarageLed",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            GarageLed2: {
+                                DeviceName: "GarageLed2",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        },
+                        Hallway: {
+                            RoomName: "Hallway",
+                            Smartlocker: {
+                                DeviceName: "Smartlocker",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255)"
+                            },
+                            Led1: {
+                                DeviceName: "Led1",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led2: {
+                                DeviceName: "Led2",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Camera: {
+                                DeviceName: "Camera",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        },
+                        DinningRoom: {
+                            RoomName: "DinningRoom",
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        }
+                    },
+                    ThirdGroup: {
+                        PatioRoom: {
+                            RoomName: "PatioRoom",
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        },
+                        NurseryRoom: {
+                            RoomName: "NurseryRoom",
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LivingRoom: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        },
+                        OfficeRoom: {
+                            RoomName: "OfficeRoom",
+                            PC: {
+                                DeviceName: "PC",
+                                DeviceImg: "Images/PC.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            LapTop: {
+                                DeviceName: "LapTop",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Printer: {
+                                DeviceName: "Printer",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led1: {
+                                DeviceName: "Led1",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led2: {
+                                DeviceName: "Led2",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led3: {
+                                DeviceName: "Led3",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            CornerLed1: {
+                                DeviceName: "LivingroCornerLed1om",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            CornerLed2: {
+                                DeviceName: "CornerLed2",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            CornerLed3: {
+                                DeviceName: "CornerLed3",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        },
+                        LaundryRoom: {
+                            RoomName: "LaundryRoom",
+                            Led1: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led2: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            WashingMachine: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            WashingMachine2: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            },
+                            Led3: {
+                                DeviceName: "Livingroom",
+                                DeviceImg: "Images/Living Room.jfif",
+                                icon: "fa-solid fa-couch",
+                                iconColor: "rgb(255, 255, 255);"
+                            }
+                        }
+                    }
+                }
+
+                let groupData = Object.keys(Groups); // GroupData  --> [ First Group , Second Group , Third Group ]
+
+                const DevicesSection = document.querySelector("#DevicesSection");
+
+                for (let i = 0; i < groupData.length; i++) {
+
+                    const groupName = groupData[i];  // Group Number : first or second or third
+                    const group = Groups[groupName]; // first , second , third
+
+                    const rooms = Object.keys(group); // rooms is the data of the group number
+
+                    for (let j = 0; j < rooms.length; j++) { // 4 loops
+
+                        const roomName = rooms[j]; // like first room if the loop was the first
+                        const roomData = group[roomName]; // setting the data in the variable --> [ RoomName, Devices ] for every room
+
+                        // =========================
+                        // Room
+                        // =========================
+
+                        const Room = document.createElement("div");
+                        Room.classList.add("Rooms");
+
+                        if (i === 0 && j === 0) {
+                            Room.classList.add("first");
+                        }
+
+                        DevicesSection.append(Room);
+
+
+                        // =========================
+                        // Header
+                        // =========================
+
+                        const headRoom = document.createElement("div");
+                        headRoom.classList.add("head");
+
+                        const RoomTitle = document.createElement("h2");
+                        RoomTitle.innerText = roomData.RoomName;
+
+                        const ViewAll = document.createElement("a");
+                        ViewAll.href = "#";
+                        ViewAll.innerText = "View All";
+
+                        headRoom.append(RoomTitle, ViewAll);
+                        Room.append(headRoom);
+
+
+                        // =========================
+                        // Content
+                        // =========================
+
+                        const content = document.createElement("div");
+                        content.classList.add("content");
+
+                        const swiper = document.createElement("div");
+                        swiper.classList.add("swiper", "roomsSwiper");
+
+                        const swiperWrapper = document.createElement("div");
+                        swiperWrapper.classList.add("swiper-wrapper");
+
+
+                        // =========================
+                        // Devices
+                        // =========================
+
+                        const swiperSlide = document.createElement("div");
+                        swiperSlide.classList.add("swiper-slide");
+
+                        const GroupsDiv = document.createElement("div");
+                        GroupsDiv.classList.add("Groups");
+
+
+                        // =========================
+                        // Get Devices
+                        // =========================
+
+                        const deviceNames = Object.keys(roomData);
+
+                        const deviceCount = deviceNames.length - 1;
+
+                        if (deviceCount >= 4) {
+                            Room.style.gridColumn = "1 / -1";
+                        } else {
+                            const nextRoom = group[rooms[j + 1]];
+
+                            if (nextRoom) {
+                                const nextDeviceCount = Object.keys(nextRoom).length - 1;
+
+                                if (nextDeviceCount >= 4) {
+                                    Room.style.gridColumn = "1 / -1";
+                                    Room.style.width = "50%";
+                                    Room.style.justifySelf = "center";
+                                }
+                            }
+                        }
+
+
+
+                        function buildSlides() {
+
+                            swiperWrapper.innerHTML = "";
+
+                            const devicesPerSlide = window.innerWidth <= 800 ? 2 : 4;
+
+                            let currentGroup;
+                            let currentSlideDevices = 0;
+
+                            for (let k = 1; k < deviceNames.length; k++) {
+
+                                // بداية Slide جديدة
+                                if ((k - 1) % devicesPerSlide === 0) {
+
+                                    const swiperSlide = document.createElement("div");
+                                    swiperSlide.classList.add("swiper-slide");
+
+                                    const GroupsDiv = document.createElement("div");
+                                    GroupsDiv.classList.add("Groups");
+
+                                    currentGroup = document.createElement("div");
+                                    currentGroup.classList.add(
+                                        "group-" + (i + 1),
+                                        "Groups"
+                                    );
+
+                                    GroupsDiv.append(currentGroup);
+                                    swiperSlide.append(GroupsDiv);
+                                    swiperWrapper.append(swiperSlide);
+
+                                    currentSlideDevices = 0;
+                                }
+
+                                const deviceKey = deviceNames[k];
+                                const devicea = roomData[deviceKey];
+
+                                // =========================
+                                // Create Device
+                                // =========================
+
+                                const link = document.createElement("a");
+                                link.href = "#" + roomData.RoomName;
+
+                                const roomsec = document.createElement("div");
+                                roomsec.classList.add("room");
+
+                                // Image
+                                const imgDiv = document.createElement("div");
+                                imgDiv.classList.add("img");
+
+                                const img = document.createElement("img");
+                                img.src = devicea.DeviceImg;
+                                img.alt = devicea.DeviceName;
+
+                                // Icon
+                                const iconDiv = document.createElement("div");
+                                iconDiv.classList.add("icon");
+
+                                const icon = document.createElement("i");
+                                icon.className = devicea.icon;
+                                icon.style.color = devicea.iconColor;
+
+                                iconDiv.append(icon);
+                                imgDiv.append(img, iconDiv);
+
+                                // Info
+                                const info = document.createElement("div");
+                                info.classList.add("info");
+
+                                const deviceName = document.createElement("h3");
+                                deviceName.innerText = devicea.DeviceName;
+
+                                info.append(deviceName);
+
+                                roomsec.append(imgDiv, info);
+                                link.append(roomsec);
+
+                                currentGroup.append(link);
+
+                                currentSlideDevices++;
+
+                                // =========================
+                                // Grid Columns
+                                // =========================
+
+                                if (currentSlideDevices === 1) {
+
+                                    DevicesSection.style.gridTemplateColumns = "1fr 1fr";
+
+                                } else {
+
+                                    DevicesSection.style.gridTemplateColumns =
+                                        `repeat(${currentSlideDevices}, 1fr)`;
+                                }
+                            }
+                        }
+
+
+                        swiper.append(swiperWrapper);
+
+                        const pagination = document.createElement("div");
+                        pagination.classList.add("swiper-pagination");
+
+                        swiper.append(pagination);
+
+                        content.append(swiper);
+                        Room.append(content);
+
+                        buildSlides();
+
+                        const Swiper2 = new Swiper(swiper, {
+                            slidesPerView: 1,
+                            speed: 700,
+                            spaceBetween: 30,
+
+                            pagination: {
+                                el: pagination,
+                                clickable: true
+                            }
+                        });
+
+                        let isMobile = window.innerWidth <= 800;
+
+                        window.addEventListener("resize", () => {
+
+                            const newIsMobile = window.innerWidth <= 800;
+
+                            if (newIsMobile !== isMobile) {
+
+                                isMobile = newIsMobile;
+
+                                buildSlides();
+
+                                Swiper2.update();
+                                Swiper2.slideTo(0);
+                            }
+                        });
+                    }
+                }
+
+            </script>
+        
+        
+        </section>
+        
+        <section class="Rooms-Section" id="Rooms">
+            <section class="Rooms-Controller">
+                <h2 class="title">
+                    Rooms Controller
+                </h2>
+        
+                <div class="controls" id="roomsControls"></div>
+        
+                <script>
+                    const rooms = {
+                        LivingRoom: [
+                            "Television",
+                            "Light",
+                            "Fan",
+                            "AC"
+                        ],
+
+                        Kitchen: [
+                            "Oven",
+                            "Fridge",
+                            "Light"
+                        ],
+
+                        Bedroom: [
+                            "Light",
+                            "TV"
+                        ],
+
+                        Bathroom: [
+                            "Shower"
+                        ],
+
+                        GuestRoom: [
+                            "Light",
+                            "TV",
+                            "Fan",
+                            "AC"
+                        ],
+
+                        Garage: [
+                            "Car Battery Charging",
+                            "Garage Door"
+                        ],
+
+                        Hallway: [
+                            "Hallway Door",
+                            "Light",
+                            "Camera",
+                            "Fan"
+                        ],
+
+                        Dinning: [
+                            "Light",
+                            "Fan"
+                        ],
+
+                        PatioRoom: [
+                            "Garden Door",
+                            "Light"
+                        ],
+
+                        Nursery: [
+                            "Light",
+                            "Fan",
+                            "Camera",
+                            "AC"
+                        ],
+
+                        OfficeRoom: [
+                            "PC",
+                            "Light",
+                            "AC",
+                            "Fan"
+                        ],
+
+                        LaundryRoom: [
+                            "Washing Machine",
+                            "Light"
+                        ]
+                    };
+
+
+                    const roomsControls = document.querySelector("#roomsControls");
+
+                    let switchNumber = 1;
+
+
+                    for (const [roomName, devices] of Object.entries(rooms)) {
+
+                        // Create Room
+                        const room = document.createElement("div");
+
+                        room.classList.add(
+                            `${roomName}-controller`,
+                            "room-controller"
+                        );
+
+
+                        // Room title
+                        room.innerHTML = `
+                                <h3>${roomName} Controller</h3 >
+                            `;
+
+
+                        // Create devices
+                        devices.forEach(deviceName => {
+
+                            const control = document.createElement("div");
+
+                            control.classList.add("control");
+
+
+                            control.innerHTML = `
+                                        <span class="device-name" >
+                                            ${deviceName}
+                                        </span >
+        
+                                        <label
+                                            class="switch"
+                                            id="switchRm${switchNumber}"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                data-room="${roomName}"
+                                                data-device="${deviceName}"
+                                            >
+        
+                                            <span class="slider round"></span>
+                                        </label>
+                                    `;
+
+
+                            room.appendChild(control);
+
+                            switchNumber++;
+                        });
+
+
+                        // Turn all off
+                        const turnOff = document.createElement("button");
+
+                        turnOff.classList.add("turn-off");
+
+                        turnOff.textContent = "Turn all off";
+
+
+                        turnOff.addEventListener("click", () => {
+
+                            const switches = room.querySelectorAll(
+                                'input[type="checkbox"]'
+                            );
+
+                            switches.forEach(sw => {
+                                sw.checked = false;
+                            });
+
+                        });
+
+
+                        room.appendChild(turnOff);
+
+
+                        // Add room
+                        roomsControls.appendChild(room);
+                    }
+
+                </script>
+        
+            </section>
+        
+        
+        </section>
+        
+        
+        <section class="Automation" id="Automation">
+            <h2>Automation System</h2>
+
+            <div class="Automation-card">
+                <h2 class="Card-Name">
+                    CCV Camera
+                </h2>
+
+                <img src="Images/CCV.jfif" alt="CCV camera">
+
+                <div class="under">
+                    <h4 class="state on" id="CCV-state">
+                        
+                    </h4>
+                    
+                    <label class="switch" id="CCV-switch">
+                        <input type="checkbox" id="toggleSwitch">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="Automation-card">
+                <h2 class="Card-Name">
+                    Out Door
+                </h2>
+
+                <img src="Images/OutDoor.jfif" alt="CCV camera">
+
+                <div class="under">
+                    <h4 class="state off" id="door-state">
+                        
+                    </h4>
+                    
+                    <label class="switch" id="Door-switch">
+                        <input type="checkbox" id="toggleSwitch">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <p>To get more controls go to the Rooms Section</p>
+        </section>
+        
+        <section class="Energy" id="Energy">
+            <h2 class="Energy-Title">Energy Usage</h2>
+
+            <div class="Energy-info">
+                <h2>Energy Chart</h2>
+                <div class="EnergyChart" id="EnergyChart"></div>
+            </div>
+            
+            <table border="1">
+                <tr>
+                    <th>Device Name</th>
+                    <th>Device Elec Usage</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>PC</td>
+                        <td>2 Wat</td>
+                    </tr>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>1.4 Wat</td>
+                    </tr>
+                    <tr>
+                        <td>Microwave</td>
+                        <td>0.5 Wat</td>
+                    </tr>
+                    <tr>
+                        <td>TV</td>
+                        <td>3 Wat</td>
+                    </tr>
+                    <tr>
+                        <td>Lamp(1)</td>
+                        <td>1 Wat</td>
+                    </tr>
+                    <tr>
+                        <td>Lamp(2)</td>
+                        <td>1 Wat</td>
+                    </tr>
+                    <tr>
+                        <td>Lamp(3)</td>
+                        <td>1.2 Wat</td>
+                    </tr>
+                    <tr>
+                        <td>Fan</td>
+                        <td>4.6 Wat</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <span>Turn on the energy keep system <input type="checkbox"></span>
+            
+        </section>
+
+        <section class="Security" id="Security">
+            <h2 class="Title">Security Overview</h2>
+
+            <div class="Security-Chart">
+                <h2>Security Chart</h2>
+                
+                <div id="SecurityChart" class="SecurityChart"></div>
+
+                <div class="bottom">
+                    <h3>CCV Camera : Opened</h3>
+                    <h3>Outdoor : Locked</h3>
+                    <h3>Home is protected from <span class="hack">Hacking</span></h3>
+                </div>
+            </div>
+
+            <h3 class="state">The Home State:
+                <span class="Home-State">Safe, All Secured</span>
+            </h3>
+
+            <div class="happy-images" style="margin-top: 20px;">
+                <img src="Images/Happy1.png" style="rotate: 20deg; animation: dancing1 1s ease-in-out infinite;" alt="Happy Image">
+                <img src="Images/Happy2.png" style="rotate: -10deg; animation: dancing2 2s ease-in-out infinite;" alt="Happy Image">
+                <img src="Images/Happy3.png" style="rotate: -25deg; animation: dancing3 1.6s ease-in-out infinite;" alt="Happy Image">
+            </div>
+        </section>
+
+        <div class="contact" id="Contact-Sec">
+            <form>
+                <h2>Contact Us</h2>
+        
+                <div class="username">
+                    <label for="Username">Username</label>
+                    <input type="text" id="Username" placeholder="Enter Username">
+                </div>
+        
+                <div class="textarea">
+                    <label for="Message">Message :</label>
+                    <textarea name="Description" rows="6" cols="4" placeholder="Enter your Message" maxlength="200"></textarea>
+                </div>
+        
+                <button class="btn">Send</button>
+            </form>
+        </div>
+
+        <section class="settings" id="Settings">
+            <img src="Images/file.jpg" alt="Profile Image">
+
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+                <h2>Hamdy</h2>
+                <h4>hamdymsm1@gmail.com</h4>
+            </div>
+
+            <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+                <form method="GET" action="index.html">
+                    <div>
+                        <label style="color: black; font-size: 20px; position: absolute; left: -6px" for="email">Email:</label>
+                        <input name="email" id="email" type="email" required autocomplete="email">
+                    </div>
+                    <div>
+                        <label style="color: black; font-size: 20px; position: absolute; left: -6px" for="tel">Tel Number:</label>
+                        <input name="telephone" style="margin-left: 100px;" id="tel" type="tel" required maxlength="11" minlength="11" autocomplete="tel-local">
+                    </div>
+                
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
